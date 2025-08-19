@@ -1,12 +1,11 @@
-/* Simple but with light color and structure */
 :root{
   --bg:#ffffff;
-  --ink:#1f2937; /* slate-800 */
-  --muted:#6b7280; /* gray-500 */
-  --line:#e5e7eb; /* gray-200 */
-  --brand:#2563eb; /* blue-600 */
-  --brand-light:#dbeafe; /* blue-100 */
-  --panel:#f9fafb; /* gray-50 */
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --brand:#2563eb;
+  --brand-light:#dbeafe;
+  --panel:#f9fafb;
   --card:#ffffff;
 }
 
