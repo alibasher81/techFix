@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechFix Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title"><a href="index.html">TechFix Solutions</a></h1>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h2>About</h2>
+  <p>TechFix Solutions is a local repair shop focused on clear pricing and reliable service. Owner- Ali Basheer and his bothers </p>
+
+  <section class="panel">
+    <h3>Sample Pricing</h3>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr><th>Service</th><th>Turnaround</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Diagnostics</td><td>24–48 hrs</td><td>$49</td></tr>
+          <tr><td>Screen Replacement</td><td>1–2 days</td><td>$189+</td></tr>
+          <tr><td>Battery Replacement</td><td>Same day</td><td>$99+</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3>Contact / Feedback</h3>
+    <form id="feedbackForm" class="form">
+      <div class="form-grid">
+        <label>Name
+          <input id="fbName" name="name" required>
+        </label>
+        <label>Email
+          <input id="fbEmail" name="email" type="email" required>
+        </label>
+        <label class="full">Message
+          <textarea id="fbMsg" name="message" rows="3" required></textarea>
+        </label>
+        <label>Satisfaction
+          <select id="fbRating" name="rating" required>
+            <option value="">Choose…</option>
+            <option>5 - Excellent</option>
+            <option>4 - Good</option>
+            <option>3 - Okay</option>
+            <option>2 - Poor</option>
+            <option>1 - Bad</option>
+          </select>
+        </label>
+        <div class="full btn-row">
+          <button type="submit" class="btn primary">Send</button>
+          <button type="button" id="restoreDraftBtn" class="btn">Restore Draft</button>
+        </div>
+      </div>
+      <p id="fbStatus" class="msg"></p>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container small">
+    <p>© <span id="year"></span> TechFix Solutions · 123 Fix-It Ave · (481) 123-4567 · support_ali@techfix.example</p>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechFix Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title"><a href="index.html">TechFix Solutions</a></h1>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h2>Shop</h2>
+  <p>Simple catalog of parts we recommend.</p>
+
+  <section class="grid-3">
+    <article class="product card" data-id="ram16" data-name="16GB DDR4 RAM" data-price="49.99">
+      <h3>16GB DDR4 RAM</h3>
+      <p class="price">$49.99</p>
+      <button class="add-to-cart btn primary" type="button">Add to Cart</button>
+    </article>
+    <article class="product card" data-id="ssd1tb" data-name="1TB NVMe SSD" data-price="74.99">
+      <h3>1TB NVMe SSD</h3>
+      <p class="price">$74.99</p>
+      <button class="add-to-cart btn primary" type="button">Add to Cart</button>
+    </article>
+    <article class="product card" data-id="gpu6600" data-name="Radeon RX 6600 GPU" data-price="219.00">
+      <h3>Radeon RX 6600 GPU</h3>
+      <p class="price">$219.00</p>
+      <button class="add-to-cart btn primary" type="button">Add to Cart</button>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h3>Your Cart</h3>
+    <div class="cart-controls">
+      <button id="viewCartBtn" class="btn" type="button">View Cart</button>
+      <button id="clearCartBtn" class="btn" type="button">Clear Cart</button>
+      <span class="muted">Items: <strong id="cartCount">0</strong></span>
+    </div>
+    <div id="cartArea" class="table-wrap" hidden>
+      <table class="table">
+        <thead>
+          <tr><th>Product</th><th>Qty</th><th>Price</th><th>Subtotal</th><th></th></tr>
+        </thead>
+        <tbody id="cartBody"></tbody>
+        <tfoot>
+          <tr><td colspan="3" class="right">Total</td><td id="cartTotal">$0.00</td><td></td></tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3>Custom Order / Repair Request</h3>
+    <form id="customOrderForm" class="form">
+      <div class="form-grid">
+        <label>Name
+          <input id="coName" name="name" required>
+        </label>
+        <label>Email
+          <input id="coEmail" name="email" type="email" required>
+        </label>
+        <label>Type
+          <select id="coType" name="type" required>
+            <option value="">Choose…</option>
+            <option>RAM</option>
+            <option>GPU</option>
+            <option>SSD</option>
+            <option>Repair Service</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="full">Details
+          <textarea id="coDetails" name="details" rows="3" required></textarea>
+        </label>
+        <label>Quantity
+          <input id="coQty" name="quantity" type="number" min="1" value="1" required>
+        </label>
+        <div class="full">
+          <button type="submit" class="btn primary">Submit Request</button>
+        </div>
+      </div>
+      <p id="customOrderStatus" class="msg"></p>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container small">
+    <p>© <span id="year"></span> TechFix Solutions · 123 Fix-It Ave · (481) 123-4567 · support_ali@techfix.example</p>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+
+</body>
+</html>
